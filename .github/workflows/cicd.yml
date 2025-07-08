@@ -81,6 +81,9 @@ jobs:
       - test
       - code-scan
     if: github.event_name == 'release'
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
